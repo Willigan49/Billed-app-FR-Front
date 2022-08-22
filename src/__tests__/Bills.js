@@ -125,7 +125,7 @@ describe("Given I am connected as an employee", () => {
       expect(handleClickNewBill).toHaveBeenCalled();
     });
   });
-  describe("When I navigate to Dashboard", () => {
+  describe("When I navigate to Bills", () => {
     test("fetches bills from mock API GET", async () => {
       window.localStorage.setItem(
         "user",
@@ -192,6 +192,3 @@ describe("Given I am connected as an employee", () => {
     });
   });
 });
-
-// $.fn.modal = jest.fn(); Tester la modal
-// 'A modal should open'
