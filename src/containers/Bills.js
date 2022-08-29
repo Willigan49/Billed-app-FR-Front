@@ -26,11 +26,7 @@ export default class {
 
   handleClickIconEye = (icon) => {
     const billUrl = icon.getAttribute("data-bill-url");
-    let extension = billUrl
-      .substr(billUrl.lastIndexOf("."), billUrl.length)
-      .toLowerCase();
-    const extensions = [".jpg", ".jpeg", ".png"];
-    if (extensions.includes(extension)) {
+    if (!billUrl.includes("null")) {
       const imgWidth = Math.floor($("#modaleFile").width() * 0.5);
       $("#modaleFile")
         .find(".modal-body")
@@ -72,7 +68,6 @@ export default class {
               };
             }
           });
-          console.log("length", bills.length);
           return bills;
         });
     }
